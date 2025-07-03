@@ -1,17 +1,21 @@
 {% extends "layout.html" %}
 
-{% block content %}    
+{% block content %}
     <div class="row">
         <div class="col-md-12 text-center">
-            <h1>Welcome to Arnav's Tech Academy.</h1>
-            {% if login %}
-            <h3>Let's get started.</h3>
-            {% else %}
-            <p>Already registered? <a href="{{url_for('login')}}">Login</a></p>
-            {% endif %}
-            </div>
+            <h1>Welcome to Universal Tech Academy.</h1>
 
+            {% if session['username'] %}
+                <h3>Let's get started.</h3>
+            {% else %}
+                <p>Already registered? <a href="{{url_for('login') }}">Login</a></p>
+            {% endif %}
+
+            <div style="text-align:left;">
+                <h2>What Is AI  All About?</h2> 
+                
+                <p>🤖 Artificial Intelligence (AI) is the science of designing machines and systems that can simulate human intelligence. This includes learning from data, recognizing patterns, solving problems, and even making decisions without being explicitly programmed for every task. From algorithms that suggest your next playlist to robots navigating space, AI is at the core of countless innovations that mimic cognitive abilities like perception, reasoning, and language understanding.</p>
+                <p>🌐 At its heart, AI merges computer science with fields like mathematics, linguistics, neuroscience, and philosophy. It powers applications ranging from chatbots and virtual assistants to autonomous vehicles and medical diagnostics. As AI systems evolve, they’re not just tools—they’re collaborators, transforming how we work, think, and connect. It’s less about building “thinking machines” and more about augmenting human potential in ways we’re just beginning to imagine.</p>
+        </div>
     </div>
 {% endblock %}
-
-
